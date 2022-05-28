@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "author": "Alysson",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1n",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "sqlite": "^4.1.1",
+    "sqlite3": "^5.0.8"
+  },
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
