@@ -24,7 +24,7 @@ export async function selectEstoque(req, res){
 export async function insertEstoque(req, res){
     const estoque = req.body
     openDb().then(db => {
-        db.run("INSERT INTO produto(id_produto, qtd) VALUES (?, ?)", [estoque.id_produto, estoque.qtd])
+        db.run("INSERT INTO estoque(id_produto, qtd) VALUES (?, ?)", [estoque.id_produto, estoque.qtd])
     })
     res.json({
         "statusCode": 200
@@ -34,7 +34,7 @@ export async function insertEstoque(req, res){
 export async function updateEstoque(req, res){
     const estoque = req.body
     openDb().then(db => {
-        db.run("UPDATE produto SET qtd=? WHERE id=? ", [estoque.qtd, estoque.id])
+        db.run("UPDATE estoque SET qtd=? WHERE id=? ", [estoque.qtd, estoque.id])
     })
     res.json({
         "statusCode": 200
